@@ -6,6 +6,6 @@ function mostrar()
 { 
 	var nombreus;
 	nombreus=prompt("Ingrese nombre","");
-	alert("El nobre es: "+nombreus);
+	alert("El nombre es: "+nombreus);
 }
 
