@@ -6,8 +6,8 @@ y luego mostrarlo por 'alert' al presionar el botón  'mostrar'*/
 function mostrar()
  
 { 
-	var nombreus;
-	nombreus=prompt("Ingrese nombre","");
-	alert("Su nombre es "+nombreus);
+	var nombreDelUser;
+	nombreDelUser = prompt("Ingrese nombre por favor");
+	alert("Su nombre es "+nombreDelUser);
 }
 
