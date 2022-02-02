@@ -50,7 +50,7 @@ function multiplicar()
     
     alert("El resultado la multiplicacion es "+ resultado);
 }
-
+ 
 function dividir()
 {
 	var valorUno;
@@ -63,7 +63,7 @@ function dividir()
     
     resultado = valorUno / valorDos;
     
-    alert("El resultado de la divicion es "+ resultado);
+    alert("El resultado de la division es "+ resultado);
 }
 
 
