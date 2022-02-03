@@ -11,28 +11,36 @@ function Sumar ()
 	var valorUno;
 	var valorDos;
 	var valorTres;
-	
+	var valorFinal;
+	var mensajeA;
 	valorUno = txtIdPrecioUno.value;
 	valorDos = txtIdPrecioDos.value;
     valorTres = txtIdPrecioTres.value;
+    valorFinal= (valorUno+valorDos+valorTres)
     valorUno = parseInt(valorUno);
     valorDos = parseInt(valorDos);
     valorTres = parseInt(valorTres);
-    alert("El valor de la suma es "+(valorUno+valorDos+valorTres));
+    valorFinal = parseInt(valorUno+valorDos+valorTres);
+    mensajeA ="El valor de la suma es "+ valorFinal
+    alert(mensajeA);
 }
 function Promedio () 
 {
 	var valorUno;
 	var valorDos;
 	var valorTres;
-	
+	var valorPromedio;
+	var mensajeA;
 	valorUno = txtIdPrecioUno.value;
 	valorDos = txtIdPrecioDos.value;
     valorTres = txtIdPrecioTres.value;
     valorUno = parseInt(valorUno);
     valorDos = parseInt(valorDos);
     valorTres = parseInt(valorTres);
-    alert("El valor promedio es "+(valorUno+valorDos+valorTres)/3);
+    valorPromedio = parseInt(valorPromedio);
+    valorPromedio = ((valorUno+valorDos+valorTres)/3);
+    mensajeA ="El valor promedio es "+valorPromedio;
+    alert(mensajeA);
 }
 function PrecioFinal () 
 {
@@ -42,6 +50,7 @@ function PrecioFinal ()
 	var sumaValores;
     var valorImpuesto;
     var valorFinal;
+    var mensajeA;
 	valorUno = txtIdPrecioUno.value;
 	valorDos = txtIdPrecioDos.value;
     valorTres = txtIdPrecioTres.value;
@@ -49,10 +58,8 @@ function PrecioFinal ()
     valorDos = parseInt(valorDos);
     valorTres = parseInt(valorTres);
     sumaValores=(valorUno+valorDos+valorTres);
-        	
-	valorImpuesto = parseInt(sumaValores) * 0.21;
-    
+    valorImpuesto = parseInt(sumaValores) * 0.21;
     valorFinal = parseInt(sumaValores) + valorImpuesto;
-   
-    alert("El valor final es "+valorFinal);
+    mensajeA = "El valor final es "+valorFinal
+    alert(mensajeA);
 }
