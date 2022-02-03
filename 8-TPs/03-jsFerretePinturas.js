@@ -24,4 +24,3 @@ function CentigradosFahrenheit ()
     valorFar = ((ingresoGrados *(9/5))+32);
     alert( ingresoGrados + " grados centígrados son "+ valorFar + " grados Fahrenheit ");
 }
-//txtIdTemperatura
