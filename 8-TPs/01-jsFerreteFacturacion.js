@@ -1,6 +1,6 @@
 /*
 Magariños Alan DIV I 
-TP Ferrete facturación
+TP 1 Ferrete facturación
 /*1.	Para el departamento de facturación:
 A.	Ingresar tres precios de productos y mostrar la suma de los mismos.
 B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
