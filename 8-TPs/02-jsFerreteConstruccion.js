@@ -23,10 +23,9 @@ function Circulo ()
 {
 	var radio;
 	var perimetroCircunferencia;
-
     radio = txtIdRadio.value;
     radio = parseInt(radio);
-    perimetroCircunferencia = ((2*3.14)*radio);
+    perimetroCircunferencia = (2*(Math.PI)*(radio));
     alert("La longitud necesaria de material es "+(perimetroCircunferencia)*3);
 }
 function Materiales () 
