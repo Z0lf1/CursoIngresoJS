@@ -6,23 +6,36 @@ B.	Al ingresar una temperatura en Centígrados debemos mostrar la temperatura en
 */
 function FahrenheitCentigrados () 
 {
-	var ingresoGrados;
-    var valorCel;
-    var mensajeA;
-	ingresoGrados=txtIdTemperatura.value;
-    ingresoGrados=parseInt(ingresoGrados);
-    valorCel = ((ingresoGrados - 32) *(5/9));
-    mensajeA = ingresoGrados + " grados Fahrenheit son "+ valorCel + " grados centígrados"
-    alert( mensajeA);
+	
+   var ingresoGrados;
+   var convercionGrados;
+   var mensajeA;
+   
+   ingresoGrados = txtIdTemperatura.value;
+   ingresoGrados = parseInt(ingresoGrados);
+   convercionGrados = (ingresoGrados-32) * 5/9;
+   
+   mensajeA = ingresoGrados +" grados Fahrenheit son "; 
+   mensajeA+= convercionGrados.toFixed(2) + " grados Centigrados";
+
+   alert(mensajeA);
+    
     
 }
 
 function CentigradosFahrenheit () 
 {
-	var ingresoGrados;
-    var valorFar;
-	ingresoGrados=txtIdTemperatura.value;
-    ingresoGrados=parseInt(ingresoGrados);
-    valorFar = ((ingresoGrados *(9/5))+32);
-    alert( ingresoGrados + " grados centígrados son "+ valorFar + " grados Fahrenheit ");
+	var grados;
+    var conversion;
+    var mensaje;
+
+    grados = txtIdTemperatura.value;
+    grados = parseInt(grados);
+    conversion = ((grados * 9/5) +32);
+
+    mensaje = grados + " grados centigrados son ";
+    mensaje += conversion.toFixed(2) + " grados fahrenheit";
+
+    alert(mensaje);
+   
 }

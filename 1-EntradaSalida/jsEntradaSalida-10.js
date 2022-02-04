@@ -19,8 +19,5 @@ function mostrarAumento()
    
     txtIdResultado.value= importeDescuento; 
    
-   }
-
-
-   
+   }  
 	
