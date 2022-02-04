@@ -8,10 +8,12 @@ function FahrenheitCentigrados ()
 {
 	var ingresoGrados;
     var valorCel;
+    var mensajeA;
 	ingresoGrados=txtIdTemperatura.value;
     ingresoGrados=parseInt(ingresoGrados);
     valorCel = ((ingresoGrados - 32) *(5/9));
-    alert( ingresoGrados + " grados Fahrenheit son "+ valorCel + " grados centígrados");
+    mensajeA = ingresoGrados + " grados Fahrenheit son "+ valorCel + " grados centígrados"
+    alert( mensajeA);
     
 }
 

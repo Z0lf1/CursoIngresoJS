@@ -12,14 +12,12 @@ function mostrarAumento()
     var importeDescuento;
 
     importeBase = txtIdImporte.value;
-
-    importeDescuento = txtIdResultado.value; 	
-	
-	porcentajeDescuento = parseInt(importeBase) * 0.25;
+    importeBase = parseInt(importeBase);
+	porcentajeDescuento = importeBase * 0.25;
     
-    importeDescuento = parseInt(importeBase) - porcentajeDescuento;
+    importeDescuento = importeBase - porcentajeDescuento;
    
-    document.getElementById('txtIdResultado').value= importeDescuento; 
+    txtIdResultado.value= importeDescuento; 
    
    }
 
