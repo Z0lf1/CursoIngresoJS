@@ -1,14 +1,13 @@
 /*
 Magariños Alan DIV I 
-E/S 01
-Al presionar el  botón, 
-se debe mostrar un mensaje como el siguiente "Esto funciona de maravilla"*/
+1 Tp Sabados
+Se piden tres nombre de producto, y los precios de cada  producto ingresado,
+sacar el precio bruto (la suma de los tres sin impuestos), el promedio de los
+precios y el precio final total más iva (21%), pedir un porcentaje de descuento 
+y aplicarlo al precio final, mostrar todos 
+los datos calculados e ingresados por alert. (solo un alert en el código)
+*/
 
-//Se piden tres nombre de producto, y los precios de cada  producto ingresado,
-// sacar el precio bruto (la suma de los tres sin impuestos), el promedio de los
-// precios y el precio final total más iva (21%), pedir un porcentaje de descuento 
-//y aplicarlo al precio final, mostrar todos 
-//los datos calculados e ingresados por alert. (solo un alert en el código)
 function mostrar()
 {
 	var productoUno;
@@ -18,11 +17,14 @@ function mostrar()
 	var valorProductoUno;
 	var valorProductoDos;
 	var valorProductoTres;
+    
     var precioBruto;
     var promedio;
     var impuestoAplicar;
+   
     var valorPostImpuesto;
     var descuentoAAplicar;
+    var descuentoAplicable;
     var descuentoAplicado;
    
 	productoUno = prompt("Ingrese primer producto");
@@ -43,13 +45,16 @@ function mostrar()
     
     impuestoAplicar = parseFloat(precioBruto) * 0.21;
     valorPostImpuesto = parseFloat(precioBruto) + impuestoAplicar;
-    descuentoAAplicar = valorPostImpuesto * 0.25;
-    descuentoAplicado =valorPostImpuesto - descuentoAAplicar;
+    
+    descuentoAplicable = (valorPostImpuesto*descuentoAAplicar)/100 ;
+    descuentoAplicado = valorPostImpuesto - descuentoAplicable;
+    
+
     mensaje="El valor de su compra en bruto es: $"+ precioBruto;
-	mensaje+=" con un valor promedio de: $"+promedio; 
+	mensaje+=" con un valor promedio de: $"+promedio+ " por producto"; 
 	mensaje+=" Posterior a la aplicacion de impuestos es: $"+valorPostImpuesto;  
-	mensaje+=" Aplicando un descuento de "+descuentoAAplicar+" alcanza la suma de $";
-	mensaje+= descuentoAplicado;
+	mensaje+=" Aplicando un descuento de "+descuentoAAplicar+"%"+" alcanza la suma de $";
+	mensaje+= descuentoAplicado.toFixed(2);
 	alert(mensaje);
 
 	}
