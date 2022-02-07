@@ -9,19 +9,17 @@ Al ingresar una edad debemos informar si la persona es mayor de edad, sino infor
 
 function mostrar()
 {
-	
-		var edad;
+var edad;
 
-	edad = txtIdEdad.value;
-	edad = parseInt(edad);
+edad = txtIdEdad.value;
+edad = parseInt(edad);
 	
 if(edad>17)
 {
   alert("La persona es mayor de edad"); 
 }
- if (edad)
-}
  else
 {
   alert("La persona es menor de edad"); 
+}
 }
