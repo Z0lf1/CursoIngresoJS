@@ -1,6 +1,27 @@
+/*
+Magariños Alan DIV I 
+IntroduccionIF 03
+Enunciado:
+Al ingresar una edad debemos informar si la persona es mayor de edad, sino informar que es un menor de edad.
+*/
+
+
+
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
+	
+		var edad;
 
-}//FIN DE LA FUNCIÓN
+	edad = txtIdEdad.value;
+	edad = parseInt(edad);
+	
+if(edad>17)
+{
+  alert("La persona es mayor de edad"); 
+}
+ if (edad)
+}
+ else
+{
+  alert("La persona es menor de edad"); 
+}
