@@ -10,7 +10,8 @@ var edad;
 
 edad = txtIdEdad.value;
 edad = parseInt(edad);
-	
+/*tambien aplicable
+if(!(edad>17 || edad<13)*/	
 if(edad>17 || edad<13)
 {
         alert("La persona no es adolescente"); 
