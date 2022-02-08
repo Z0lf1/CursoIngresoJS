@@ -1,6 +1,19 @@
+/*
+Magariños Alan DIV I 
+IntroduccionIF 05
+Enunciado:
+Al ingresar una edad solo debemos informar si la persona NO es adolescente.
+*/
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
+var edad;
 
-}//FIN DE LA FUNCIÓN
+edad = txtIdEdad.value;
+edad = parseInt(edad);
+	
+if(edad>17 || edad<13)
+{
+        alert("La persona no es adolescente"); 
+}
+
+}
