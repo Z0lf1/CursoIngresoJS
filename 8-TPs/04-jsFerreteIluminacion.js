@@ -12,98 +12,125 @@ brutos en informar del impuesto con el siguiente mensaje:
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-
-function CalcularPrecio () 
+function
+CalcularPrecio ()
 {
- 	var cantidadLamparas;
- 	var cantidadLamparasA;
- 	var costoLamparas;
- 	var costoLamparasA;
- 	var precioLamparasUnidad;
- 	var marcaLampara;
- 	var costoFinalLamparas;
- 	var impuestoIngreso;
- 	var impuestoAplicado;
- 	var mensaje;
+  var cantidadLamparas;
+  var cantidadLamparasA;
+  var costoLamparas;
+  var costoLamparasA;
+  var precioLamparasUnidad;
+  var marcaLampara;
+  var costoFinalLamparas;
+  var impuestoIngreso;
+  var impuestoAplicado;
+  var mensaje;
 
- 	cantidadLamparas = document.getElementById('txtIdCantidad').value;
- 	cantidadLamparasA = parseInt(cantidadLamparas);
-    costoLamparas = document.getElementById('txtIdprecioDescuento').value;
-    costoLamparasA = parseInt(costoLamparas);
-    precioLamparasUnidad = 35;
-    marcaLampara = document.getElementById('Marca').value;
-    costoFinalLamparas = (precioLamparasUnidad * cantidadLamparasA);
-    impuestoIngreso = (costoLamparasA*0.1);
-    impuestoAplicado = ( costoLamparasA + impuestoIngreso) ;    
-    mensaje =( "Usted pagó el costo de $ "+ impuestoAplicado + " siendo $ "+ impuestoIngreso.toFixed(2) +" del impuesto pago");
-   
-   	
-   	
-   if(cantidadLamparasA>5) 
-     {
-      document.getElementById('txtIdprecioDescuento').value=  (costoFinalLamparas*0.5);
-     }
-     else
-    	 {if(cantidadLamparasA==5 && marcaLampara=="ArgentinaLuz")
-           {
-           	document.getElementById('txtIdprecioDescuento').value = (costoFinalLamparas-costoFinalLamparas*0.4);
-           }
-             else
-               {
-               	if(cantidadLamparasA==5)
-               {
-               	document.getElementById('txtIdprecioDescuento').value = (costoFinalLamparas-costoFinalLamparas*0.3);
-               }
-                 else
-                  {
-                  	if(cantidadLamparasA==4 && (marcaLampara=="ArgentinaLuz" || marcaLampara=="FelipeLamparas"))
-                   {
-                    document.getElementById('txtIdprecioDescuento').value = (costoFinalLamparas-costoFinalLamparas*0.25);
-                   }
-                    else
-                     {
-                      if(cantidadLamparasA==4)
-                     {
-                      document.getElementById('txtIdprecioDescuento').value = (costoFinalLamparas-costoFinalLamparas*0.20);
-                     }
-                      else
-                      {
-                      	if(cantidadLamparasA==3 && marcaLampara=="ArgentinaLuz")
-                      	{
-                      	 document.getElementById('txtIdprecioDescuento').value = (costoFinalLamparas- costoFinalLamparas*0.15);
-                      	}
-                           else
-                        	 {if(marcaLampara=="FelipeLamparas" && cantidadLamparas==3)
-                               {
-                               document.getElementById('txtIdprecioDescuento').value = (costoFinalLamparas-costoFinalLamparas*0.1);
-                               }
-                              else{
-                             	   if(cantidadLamparasA==3)
-                             	   {
-                             	  	document.getElementById('txtIdprecioDescuento').value = (costoFinalLamparas-costoFinalLamparas*0.05);
-                             	   }
-                               else{
-                                	 if (cantidadLamparasA<=2) 
-                                	   {
-                                	   	document.getElementById('txtIdprecioDescuento').value = (costoFinalLamparas);
-                                	   }
+  cantidadLamparas = document.getElementById ('txtIdCantidad').value;
+  cantidadLamparasA = parseInt (cantidadLamparas);
+  costoLamparas = document.getElementById ('txtIdprecioDescuento').value;
+  costoLamparasA = parseInt (costoLamparas);
+  precioLamparasUnidad = 35;
+  marcaLampara = document.getElementById ('Marca').value;
+  costoFinalLamparas = (precioLamparasUnidad * cantidadLamparasA);
+  impuestoIngreso = (costoLamparasA * 0.1);
+  impuestoAplicado = (costoLamparasA + impuestoIngreso);
+  mensaje =
+    ("Usted pago: $" + impuestoIngreso.toFixed (2) + " de IIBB");
 
-     
-                             	    }
 
-                                  }
-                              }
-                           } 
-                        }
-                      }
-                   } 
-               }
-  
-	if (costoLamparasA>=120)
- 	{
- 		alert(mensaje);
- 		
- 	}  	
- 		
 
+  if (cantidadLamparasA > 5)
+    {
+      document.getElementById ('txtIdprecioDescuento').value =
+	(costoFinalLamparas * 0.5);
+    }
+  else
+    {
+      if (cantidadLamparasA == 5 && marcaLampara == "ArgentinaLuz")
+	{
+	  document.getElementById ('txtIdprecioDescuento').value =
+	    (costoFinalLamparas - costoFinalLamparas * 0.4);
+	}
+      else
+	{
+	  if (cantidadLamparasA == 5)
+	    {
+	      document.getElementById ('txtIdprecioDescuento').value =
+		(costoFinalLamparas - costoFinalLamparas * 0.3);
+	    }
+	  else
+	    {
+	      if (cantidadLamparasA == 4
+		  && (marcaLampara == "ArgentinaLuz"
+		      || marcaLampara == "FelipeLamparas"))
+		{
+		  document.getElementById ('txtIdprecioDescuento').value =
+		    (costoFinalLamparas - costoFinalLamparas * 0.25);
+		}
+	      else
+		{
+		  if (cantidadLamparasA == 4)
+		    {
+		      document.getElementById ('txtIdprecioDescuento').value =
+			(costoFinalLamparas - costoFinalLamparas * 0.20);
+		    }
+		  else
+		    {
+		      if (cantidadLamparasA == 3
+			  && marcaLampara == "ArgentinaLuz")
+			{
+			  document.getElementById ('txtIdprecioDescuento').
+			    value =
+			    (costoFinalLamparas - costoFinalLamparas * 0.15);
+			}
+		      else
+			{
+			  if (marcaLampara == "FelipeLamparas"
+			      && cantidadLamparas == 3)
+			    {
+			      document.
+				getElementById ('txtIdprecioDescuento').
+				value =
+				(costoFinalLamparas -
+				 costoFinalLamparas * 0.1);
+			    }
+			  else
+			    {
+			      if (cantidadLamparasA == 3)
+				{
+				  document.
+				    getElementById ('txtIdprecioDescuento').
+				    value =
+				    (costoFinalLamparas -
+				     costoFinalLamparas * 0.05);
+				}
+			      else
+				{
+				  if (cantidadLamparasA <= 2)
+				    {
+				      document.
+					getElementById
+					('txtIdprecioDescuento').value =
+					(costoFinalLamparas);
+				    }
+
+
+				}
+
+			    }
+			}
+		    }
+		}
+	
+        }
+	if (costoLamparas >= 120)
+    {
+      alert (mensaje);
+
+    }
+	}
+    }
+
+    
 }
