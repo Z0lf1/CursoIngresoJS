@@ -122,15 +122,15 @@ CalcularPrecio ()
 			}
 		    }
 		}
-	
-        }
-	if (costoLamparas >= 120)
+	    }
+	}
+    }
+
+  if (costoLamparasA >= 120)
     {
       alert (mensaje);
 
     }
-	}
-    }
 
-    
+
 }
