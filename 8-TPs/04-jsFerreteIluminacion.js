@@ -41,8 +41,8 @@ CalcularPrecio ()
   precioLamparasUnidad = 35;
   marcaLampara = document.getElementById ('Marca').value;
   costoFinalLamparas = (precioLamparasUnidad * cantidadLamparasA);
-  impuestoIngreso = (costoLamparasA * 0.1);
-  impuestoAplicado = (costoLamparasA + impuestoIngreso);
+  impuestoIngreso = (costoLamparasA * 0.1.toFixed(2));
+  impuestoAplicado = (costoLamparasA + impuestoIngreso).toFixed(2);
   mensaje = ("Usted pago: $" + impuestoIngreso.toFixed (2) + " de IIBB");
   
   promoSeis  = (costoFinalLamparas *0.5);
@@ -56,13 +56,13 @@ CalcularPrecio ()
   promoDos= (costoFinalLamparas);
   impuestoIngreso = (costoLamparasA * 0.1);
   impuestoAplicado = (costoLamparasA + impuestoIngreso);
-  mensaje =("Usted pago: $" + impuestoIngreso.toFixed (2) + " de IIBB");
+ 
 
 
   if (cantidadLamparasA > 5)
     {
       document.getElementById ('txtIdprecioDescuento').value = (promoSeis.toFixed(2));
-    }
+   	}
   else
     {
       if (cantidadLamparasA == 5 && marcaLampara == "ArgentinaLuz")
@@ -117,14 +117,16 @@ CalcularPrecio ()
 		           }
 		        }
 	       }
-	  } 
-      }
+		}
 
-      if (costoLamparas >= 120)
-      {
-        alert (mensaje);
+	}
 
-      }
 
+		if (document.getElementById('txtIdprecioDescuento').value>=120)
+ 	{
+ 		document.getElementById('txtIdprecioDescuento').value+(impuestoIngreso.toFixed(2));
+ 		alert("Usted pagó $"+ (impuestoIngreso.toFixed(2)) + " de IIBB.");
+ 		
+ 	} 
 
 }
