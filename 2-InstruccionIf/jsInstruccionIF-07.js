@@ -13,9 +13,9 @@ var estadocivil;
 
 edad = txtIdEdad.value;
 edad = parseInt(edad);
-estadocivil=estadoCivil.value;	
+estadocivil=document.getElementById('estadoCivil').value;	
 
-if(edad<18 && estadocivil!="soltero")
+if(edad<18 && estadocivil!="Soltero")
   
   {
     alert("Usted es muy pequeño para no ser soltero"); 
