@@ -16,70 +16,81 @@ brutos en informar del impuesto con el siguiente mensaje:
 function CalcularPrecio () 
 {
  	var cantidadLamparas;
- 	var precioLamparasUnidad;
+ 	var cantidadLamparasA;
  	var costoLamparas;
- 	var mensaje;
+ 	var costoLamparasA;
+ 	var precioLamparasUnidad;
  	var marcaLampara;
  	var costoFinalLamparas;
- 	var impuestoE;
- 	
+ 	var impuestoIngreso;
+ 	var impuestoAplicado;
+ 	var mensaje;
+
  	cantidadLamparas = document.getElementById('txtIdCantidad').value;
- 	cantidadLamparas = parseInt(cantidadLamparas);
-    costoFinalLamparas = document.getElementById('txtIdprecioDescuento').value;
+ 	cantidadLamparasA = parseInt(cantidadLamparas);
+    costoLamparas = document.getElementById('txtIdprecioDescuento').value;
+    costoLamparasA = parseInt(costoLamparas);
     precioLamparasUnidad = 35;
     marcaLampara = document.getElementById('Marca').value;
-    
-    costoLamparas = (precioLamparasUnidad * cantidadLamparas);
-        
-    mensaje = "Usted pagará $";  
+    costoFinalLamparas = (precioLamparasUnidad * cantidadLamparasA);
+    impuestoIngreso = (costoLamparasA*0.1);
+    impuestoAplicado = ( costoLamparasA + impuestoIngreso) ;    
+    mensaje =( "Usted pagó el costo de $ "+ impuestoAplicado + " siendo $ "+ impuestoIngreso.toFixed(2) +" del impuesto pago");
    
-   if(cantidadLamparas>5) 
+   	
+   	
+   if(cantidadLamparasA>5) 
      {
-      document.getElementById('txtIdprecioDescuento').value= (mensaje + (costoLamparas*0.5));
+      document.getElementById('txtIdprecioDescuento').value=  (costoFinalLamparas*0.5);
      }
      else
-    	 {if(cantidadLamparas==5 && marcaLampara=="ArgentinaLuz")
+    	 {if(cantidadLamparasA==5 && marcaLampara=="ArgentinaLuz")
            {
-           	document.getElementById('txtIdprecioDescuento').value = (mensaje + (costoLamparas-costoLamparas*0.4));
+           	document.getElementById('txtIdprecioDescuento').value = (costoFinalLamparas-costoFinalLamparas*0.4);
            }
              else
                {
-               	if(cantidadLamparas==5)
+               	if(cantidadLamparasA==5)
                {
-               	document.getElementById('txtIdprecioDescuento').value = (mensaje + (costoLamparas-costoLamparas*0.3));
+               	document.getElementById('txtIdprecioDescuento').value = (costoFinalLamparas-costoFinalLamparas*0.3);
                }
                  else
                   {
-                  	if(cantidadLamparas==4 && (marcaLampara=="ArgentinaLuz" || marcaLampara=="FelipeLamparas"))
+                  	if(cantidadLamparasA==4 && (marcaLampara=="ArgentinaLuz" || marcaLampara=="FelipeLamparas"))
                    {
-                    document.getElementById('txtIdprecioDescuento').value = (mensaje + (costoLamparas-costoLamparas*0.25));
+                    document.getElementById('txtIdprecioDescuento').value = (costoFinalLamparas-costoFinalLamparas*0.25);
                    }
                     else
                      {
-                      if(cantidadLamparas==4)
+                      if(cantidadLamparasA==4)
                      {
-                      document.getElementById('txtIdprecioDescuento').value = (mensaje + (costoLamparas-costoLamparas*0.20));
+                      document.getElementById('txtIdprecioDescuento').value = (costoFinalLamparas-costoFinalLamparas*0.20);
                      }
                       else
                       {
-                      	if(cantidadLamparas==3 && marcaLampara=="ArgentinaLuz")
+                      	if(cantidadLamparasA==3 && marcaLampara=="ArgentinaLuz")
                       	{
-                      	 document.getElementById('txtIdprecioDescuento').value = (mensaje + (costoLamparas- costoLamparas*0.15));
+                      	 document.getElementById('txtIdprecioDescuento').value = (costoFinalLamparas- costoFinalLamparas*0.15);
                       	}
                            else
                         	 {if(marcaLampara=="FelipeLamparas" && cantidadLamparas==3)
                                {
-                               document.getElementById('txtIdprecioDescuento').value = (mensaje + (costoLamparas-costoLamparas*0.1));
+                               document.getElementById('txtIdprecioDescuento').value = (costoFinalLamparas-costoFinalLamparas*0.1);
                                }
                               else{
-                             	   if(cantidadLamparas==3)
+                             	   if(cantidadLamparasA==3)
                              	   {
-                             	  	document.getElementById('txtIdprecioDescuento').value = (mensaje + (costoLamparas-costoLamparas*0.05));
+                             	  	document.getElementById('txtIdprecioDescuento').value = (costoFinalLamparas-costoFinalLamparas*0.05);
                              	   }
                                else{
-                                	 if (cantidadLamparas<=2) 
-                                	{document.getElementById('txtIdprecioDescuento').value = (mensaje + (costoLamparas));}
-                             	        }
+                                	 if (cantidadLamparasA<=2) 
+                                	   {
+                                	   	document.getElementById('txtIdprecioDescuento').value = (costoFinalLamparas);
+                                	   }
+
+     
+                             	    }
+
                                   }
                               }
                            } 
@@ -87,7 +98,12 @@ function CalcularPrecio ()
                       }
                    } 
                }
-        	
+  
+	if (costoLamparasA>=120)
+ 	{
+ 		alert(mensaje);
+ 		
+ 	}  	
  		
 
 }
