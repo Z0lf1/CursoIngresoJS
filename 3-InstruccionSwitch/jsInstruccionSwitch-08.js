@@ -1,6 +1,27 @@
+/*
+Magariños Alan DIV I
+ E sw 08
+Enunciado:
+Al seleccionar un destino informar si hace FRIO o CALOR en ese destino
+*/
+
 function mostrar()
 {
-	var destinoIngresado =txtIdDestino.value;
-	alert(destinoIngresado);
+    var destino;
+	var mensaje;
 
-}//FIN DE LA FUNCIÓN
+	destino = document.getElementById('txtIdDestino').value;
+	
+	switch(destino)
+	{
+		case "Bariloche":
+		case "Ushuaia":
+			mensaje="En este destino hace frio.";
+			break;
+		default:
+			mensaje = "En este destino hace calor.";
+			break;
+	}
+  alert(mensaje);
+
+}
