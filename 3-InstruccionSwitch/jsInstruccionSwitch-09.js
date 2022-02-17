@@ -43,7 +43,7 @@ function mostrar()
 	mensaje = "Su tarifa es de: $ ";
 
 	switch(estacion){ 
-		case "Invierno":{       /*Invierno: bariloche +20%, cataratas y Cordoba -10%, Mar del plata -20%*/
+		case "Invierno":       /*Invierno: bariloche +20%, cataratas y Cordoba -10%, Mar del plata -20%*/
 			  switch(destino){
     						  case "Bariloche":
     		 	 					porcentaje = 20;
@@ -54,9 +54,9 @@ function mostrar()
     						  default:
     								porcentaje = -10; 
     						 } 
- 		  			 	}
+ 		  			 	
  			        break; 	
-		case "Verano":{ /*Verano: bariloche -20%/ cataratas y Cordoba +10%/Mar del plata +20%*/
+		case "Verano": /*Verano: bariloche -20%/ cataratas y Cordoba +10%/Mar del plata +20%*/
 			  switch(destino){
     						  case "Bariloche":
     		 	 					porcentaje = -20;
@@ -68,7 +68,7 @@ function mostrar()
     								porcentaje = 10; 
     								break;
 							 }
-					  }
+					  
 			         break;
 		default: /*Otoño y Primavera: bariloche +10%/ cataratas +10%/Mar del plata +10%/Cordoba mismo valor*/
 		       switch(destino){

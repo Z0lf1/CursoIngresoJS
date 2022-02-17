@@ -94,3 +94,5 @@ function CalcularPrecio ()
     document.getElementById('txtIdprecioDescuento').value = precioFinal;
 
 }
+
+/* Usando solamente if cantidad de lamparitas y sw area marca*/
