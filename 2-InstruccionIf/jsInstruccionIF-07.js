@@ -54,12 +54,9 @@ function mostrar()
 	if (edad<13) //1.a.
  	{
  		mensaje = "Feliz Día. ";
-
  		if (nombre == "Ricardo") //2.f.
 	    {
 	    	mensajeCuatro = "Muy chiquito para ese nombre.  ";
-
-
 	    }
  	}
  	else
@@ -68,26 +65,21 @@ function mostrar()
   	 	{
   	 		mensajeCivil = "Casadx quiere casa. ";
   	 	}
-
   	 	if (edad<18)//1.b.
 	 	{
 	 		mensaje = "Usted es adolescente. ";
-
 	 		if (estadoCivil == "Divorciado") //3.j.
 	 		{
 	 			mensajeCivil = "Toda una vida por delante. ";
 	 		}
-
 	 		if (edad==17)//1.bi.
 	  		{
 	      		mensajeDos = " Último año!!! ";
-
 	    	    if (nombre == "Violeta") //2.e.
 			    {
 			    	mensajeCuatro = "Como el color!! ";
 			    }
 	    	}
-
 		}
 
 		else
@@ -95,7 +87,6 @@ function mostrar()
 			if (edad>17) //1.c.
             {
                 mensaje = "Tienes edad de laburar. ";
-
                 if (estadoCivil == "Soltero") //3.h.
                 {
                 	mensajeCivil = "A salir. ";
@@ -110,8 +101,6 @@ function mostrar()
                     if (edad > 60) //1.c.ii.
                     {
                         mensaje = "A jubilarse. ";
-
-
                  	if (edad == 88) //1.c.iii.
                  	{
                  		mensajeDos = "Lindo número. ";
@@ -120,27 +109,16 @@ function mostrar()
 					    {
 					    	mensajeCuatro = "Como el de QUEEN ";
 					    }
-
                     }
-
-
                 }
-
             }
 		}
-	
-
 	}
-    
     if (edad%2==0) //1.d.
     {
     	mensajeTres = "Es par. ";
     }
-
-	
  	 mensajeAlerta = mensaje + mensajeDos + mensajeTres + mensajeCuatro + mensajeCivil;
 
 	 	alert(mensajeAlerta);
-    
-
 }

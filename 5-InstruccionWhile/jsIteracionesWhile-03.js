@@ -1,4 +1,6 @@
-/*
+/*DIV I
+Alan Magariños
+e/ While 03
 al presionar el botón pedir la CLAVE (ayuda: es utn750)*/
 function mostrar()
 {
@@ -10,4 +12,4 @@ while(claveIngresada !="utn750")
 }
 	alert("La clave es correcta")
 	
-}//FIN DE LA FUNCIÓN
+}
