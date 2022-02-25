@@ -209,7 +209,9 @@ function mostrar()
 
 
 
-}
+}DIV I
+Alan Magariños
+e/ While 07
 */
 
 function mostrar() //Enunciado:Al presionar el botón pedir números hasta que el USUARIO QUIERA e informar la suma acumulada y el promedio.
