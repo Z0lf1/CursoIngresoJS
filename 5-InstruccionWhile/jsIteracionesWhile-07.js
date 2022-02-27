@@ -242,7 +242,7 @@ function mostrar() //Enunciado:Al presionar el botón pedir números hasta que e
 }
 */
 /*
-Ejercicio While 07 V1 (Realizar en los archivos  del ejercicio 07 del WHILE)
+Ejercicio While 07 V2 (Realizar en los archivos  del ejercicio 07 del WHILE)
 
 Realizar el algoritmo que permita 
 	el ingreso por prompt de
