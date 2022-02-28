@@ -14,7 +14,7 @@ function mostrar()
 {
 var ingresoHora;
 var mensaje;
-var ingresoHora;
+
 
 ingresoHora=document.getElementById('laHora').value;
 ingresoHora=parseInt(ingresoHora);
@@ -44,11 +44,11 @@ while(ingresoHora<0&&ingresoHora>24)
 			mensaje="Es de tarde";
 			break;
 		default:
-			mensaje="Es de noche";
-			if(ingresoHora>19 && ingresoHora<24)
+			mensaje="Es de noche, a dormir";
+			/*if(ingresoHora>19 && ingresoHora<24)
 			{
 				mensaje="Es de noche, a dormir";
-			}
+			}*/
 			break;
 	}
 alert(mensaje);
