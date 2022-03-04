@@ -461,7 +461,7 @@ function mostrar()
 	if(contadorMasculino>0) 
 	{
 		document.write("El promedio de la edad de hombres ingresados es :"+promedioEdadM+ "<br>");
-		if(nota<4&&alturaCentimetros<160)//i. El nombre del primer hombre, que mide menos de 160 cm y  está  desaprobado.
+		if(banderaPrimerDesaH=false)//i. El nombre del primer hombre, que mide menos de 160 cm y  está  desaprobado.
 		{
 			document.write("El nombre del primero hombre bajo y desaprobado es : "+ nombrePrimeroHombreBajoDesa+ "<br>");
 		}

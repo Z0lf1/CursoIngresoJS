@@ -1,0 +1,181 @@
+A.N.M. 
+
+//operadores aritmeticos 
+ +, - ,* ,/ , %,
+//operadores relacionales:
+ >= ,<= ,== , !=, >, <
+//operador logicos:
+ &&, || , !
+
+// ENTRADA DE DATOS POR PROMPT:
+	nombreDelUser = prompt("Ingrese nombre por favor");
+
+//ENTRADA DATOS POR ID:
+	nombreDelUser = document.getElementById('txtIdNombre').value;
+O
+	nombreDelUSer = txtIdNombre.value;
+	edadDelUser = txtIdEdad.value;
+
+//SALIDA 
+	//POR ID:
+		document.getElementById('txtIdNombre').value = nombreDelUser;
+
+	//por document
+		document.write("la suma de negativos es :"+sumaNegativos+ "br");
+
+	//por alert
+		alert();
+
+//Para numeros con decimales parseFloat:
+	ingresoVarNumerica = parseFloat(prompt("Ingrese diametro mayor en cm"));
+
+//Para numeros enteros parseInt:
+	cantidad = parseInt(prompt("¿Cuántas cometas desea?"));
+
+//Calculo pitagoras:
+	ladosMenores = Math.sqrt(Math.pow(catMenor,2)+ Math.pow(catMenor,2));
+	ladosMayores = Math.sqrt(Math.pow(catMayor,2) + Math.pow(catMenor,2));
+
+//calculo Area romboide: 
+	arearomboide = (ladosMayores*ladosMenores)/2;
+
+//PORCENTAJE:
+	porcentajeAplicado = (variable*porcentaje)/100 ;
+
+//Concatenacion de mensajes largos:
+	mensaje = "Para la cantidad de "+cantidad+" cometas, necesitará: ";
+	mensaje += consumoFinalVarillas.toFixed(2)+" mt de varillas y ";
+
+//RESTO DE DIVICION: (PARA DEFINIT PAR/IMPAR)
+    
+    resultado = dividendo % divisor;
+	 ò
+
+	 if(numeroIngresado%2==0)//==1 para impar
+		  {
+		  	contadorPares++;
+		  }
+		  else
+		  {
+		  	contadorImpar++;
+		  }
+
+//AUMENTO:
+    porcentajeVariable = parseInt(importeBase) * porcentaje(valor deseado/100);
+    
+    importeAumento = parseInt(importeBase) + porcentajeVariable;
+
+//DESCUENTO:
+
+   porcentajeDescuento = importeBase * porcentaje(valor deseado/100);
+    
+   importeDelDescuento = importeBase - porcentajeDescuento;
+
+//IF ESTRUCTURA
+	if(edad==15) Condicion 
+	{
+	EFECTO;
+	}
+	else
+	{
+	alert("La persona es menor de edad");
+	}
+
+//IF CONDICION para rango. 
+if(edad>12 && edad<18)
+{
+        alert("La persona es adolescente"); 
+}
+
+//CONDICION OR
+if(edad>17 || edad<13)
+{
+        alert("La persona no es adolescente"); 
+}
+
+//IF CONDICION rango y otra cosa (generalmente switch)  
+if(edad>17 && estadocivil=="Soltero")
+  
+  {
+    alert("Es soltero y no es menor."); 
+  }
+
+//IF como filtro para mostrar datos:
+	if(condicion cumple/*</>/!=*/)
+		{
+			promedioNegativos = sumaNegativos/contadorNegativos;
+			document.write("la suma de negativos es :"+promedioNegativos+ "br");
+		}
+//IF CON ENTRADA POR BANDERA(PARA NO HARDCODEAR VALOR VARIABLE ALTO) 
+if (edad<edadNBMinima|| noBinariaBandera==false)
+		 		{
+		 			edadNBMinima=edad;
+		 			alturaNb=alturaCentimetros;
+		 			notaNBJoven=nota
+		 			noBinariaBandera=true;
+		 		}
+//NUMERO ALEATORIO
+			numeroAleatorio = Math.floor((Math.random() * 10) + 1);
+							 //Math.round(Math.random()*10);
+//SWITCH:
+switch(variable){
+    case "opcion1":(entre"" si es letra, sin comillas si es numerico)      
+        mensaje/variable = ""/efecto;
+        break;
+    case "":
+        mensaje/variable = ""/efecto;
+        break;
+    default:(todo lo no asignado cae acà)
+        mensaje/variable = ""/efecto;
+        break;
+  
+//mostrar 10 repeticiones con números ASCENDENTE, desde el 1 al 10.
+	var contador;
+	contador=0;
+	while (contador<10)
+	{
+        contador++;//numero+-1/numero= numero +1
+    	alert(contador);
+    }
+
+//WHILE COMO VALIDACION:
+
+while (numeroIngresado< 0 || numeroIngresado > 9)
+	{
+		numeroIngresado = prompt("El numero ingresado es invalido, ingrese otro");
+		numeroIngresado = parseInt(numeroIngresado);
+	}
+
+while(sexoIngresado != "f" && sexoIngresado != "m")
+	{
+		sexoIngresado = prompt("No es valido, intente denuevo: ");
+	}
+
+//WHILE COMO contador, contador es para cantidad de ingresos.
+contador=0; 
+acumulador=0; //acumulador para candidad de cosas/kg/productos/etc.
+	
+	while (contador<5)
+	{
+		numeroIngresado = prompt("Ingrese numero");
+		numeroIngresado = parseInt(numeroIngresado);
+        acumulador=acumulador + numeroIngresado;//acumulador+=numeroIngresado;
+        contador++;//contador+1
+    }
+//BANDERA WHILE COMO CONFIRM (inicializada con el mismo valor de la condicion
+//cierra con respuesta util para cerrar a gusto)  
+while(respuesta==true)
+	{
+		numeroIngresado= prompt("ingrese numero:  ");
+		numeroIngresado = parseInt(numeroIngresado);
+		
+			if(numeroIngresado>numeroMaximo || banderaDelPrimero == false)
+			{ //con doblepipe continua evaluando una de las condiciones (MAXIMO/MINIMO)
+				numeroMaximo = numeroIngresado;
+			}
+			if(numeroIngresado<numeroMinimo || banderaDelPrimero == false) 
+			{
+				numeroMinimo = numeroIngresado;
+				banderaDelPrimero=true;
+			}
+			respuesta = confirm("desea continuar?");

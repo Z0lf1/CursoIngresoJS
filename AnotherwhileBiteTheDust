@@ -1,0 +1,213 @@
+Ejercicio While 07 V1
+
+Realizar el algoritmo que permita 
+	el ingreso por prompt de
+	1-alturas en centimetros	(validar entre 0 y 250) ,
+	2-la edad (validar)
+	3-temperatura(validar)
+	4-el sexo(validar el sexo “f” o “m” o "nb")
+	5-nota (validar)
+	6-nombre
+	de estudiantes de la UTN hasta que el usuario quiera, 
+
+1ERA PARTE
+	informar :
+	a)Cuántas mujeres hay .
+	b)Cuántos con fiebre y cuantos sin fiebre.
+	c)el promedio de edad por sexo.
+	
+2da PARTE
+	informar :
+	d)el primer alumno aprobado
+	e)el nombre y edad la máxima temperatura 
+	f)la altura y nota  del no binario mas joven
+
+3ra PARTE
+	informar :
+	g)el nombre de la mujer más alta de las que aprobó
+	h)el porcentaje de  personas que desaprobaron sobre el total
+	i)el nombre del primer hombre, que mide menos de 160 cm y  está  desaprobado.
+
+*/
+
+function mostrar()
+{
+	var respuesta = true;
+	var contadorAlumnos=0;
+	var contadorMujeres=0;
+	var contadorHombres=0;
+	var contadorNb=0;
+	var edadMinimaNb=0;
+	var notaMinimaNb=0;
+	var acumuladorMujeres=0;
+	var acumuladorHombres=0;
+	var acumuladorNb=0;
+	var contadorFiebre=0;
+	var promedioMujeres=0;
+	var promedioHombres=0;
+	var promedioNb=0;
+	var mensaje="";
+	var primerAprobado = false;
+	var nombreAprobado="";
+	var contadorAprobados=0;
+	var contadorDesaprobados=0;
+	var porcentajeDesaprobados=0;
+	var mayorTemperatura =0;
+	var alumnoMayorTemp;
+	var edadMayorTemp;
+	var edadMinimaNb =0;
+	var nobBandera =false;
+	var temperaturaBandera=false;
+	var mayorNotaMujer= 0;
+	var alturaMujer;
+	var nombreAlturaMujer;
+	var notaMujerBandera=false;
+	var nombrePrimerDesaprobado;
+	var primerDesaprobado=false;
+
+	while(respuesta==true) {
+
+		nombreAlumno =prompt("Ingrese su nombre:");
+		while(nombreAlumno==""){
+			nombreAlumno =prompt("Incorrecto. Ingrese un nombre válido:");
+		}
+		edadAlumno =parseInt(prompt("Ingrese su edad (mayor a 17):"));
+		while(edadAlumno < 17){
+			edadAlumno =parseInt(prompt("Incorrecto. Ingrese una edad válida:"));
+		}
+		sexoAlumno =prompt("Ingrese su sexo (f, m o nb):");
+		while(sexoAlumno != "f" && sexoAlumno != "m" && sexoAlumno != "nb"){
+			sexoAlumno =prompt("Incorrecto.Ingrese un sexo válido");
+		}
+		switch(sexoAlumno){
+			case "f":
+				contadorAlumnos++;
+				contadorMujeres++;
+				acumuladorMujeres += edadAlumno;	
+				break;
+			case "m":
+				contadorAlumnos++;
+				contadorHombres++;
+				acumuladorHombres += edadAlumno;
+				break;
+			default:
+				contadorAlumnos++;
+				contadorNb++;
+				acumuladorNb+=edadAlumno;
+			}
+
+		alturaAlumno =parseInt(prompt("Ingrese su altura en centímetros(sólo número):"));
+		while(alturaAlumno < 0){
+			alturaAlumno =parseInt(prompt("Incorrecto. Ingrese una altura válida en cms (sólo número):"));
+		}
+		
+		temperaturaAlumno =parseInt(prompt("Ingrese su temperatura corporal (sólo número):"));
+		while(temperaturaAlumno < 32 && temperaturaAlumno >42){
+			temperaturaAlumno =parseInt(prompt("Incorrecto. Ingrese temperatura válida (sólo número):"));
+		}
+
+		notaAlumno =parseInt(prompt("Ingrese su nota:"));
+		while(notaAlumno < 0){
+			notaAlumno =parseInt(prompt("Incorrecto. Ingrese una nota válida:"));
+		}
+		if(notaAlumno > 3) {
+			contadorAprobados++;
+			//COMPROBAR EL PRIMER APROBADO, Y GENERAR LISTA DE APROBADOS Y DESAPROBADOS.
+			if (primerAprobado==false){
+				primerAprobado = true;
+				nombreAprobado = nombreAlumno;
+				mensaje += `El primer alumno aprobado es: ${nombreAprobado}.`;
+				}
+		}
+		else{
+			contadorDesaprobados++;
+			}
+
+	//PORCENTAJE DE DESAPROBADOS 
+		if (contadorDesaprobados > 0){
+			porcentajeDesaprobados= contadorDesaprobados*100/contadorAlumnos;
+			mensaje+= `El porcentaje de personas que desaprobaron sobre el total es de ${porcentajeDesaprobados.toFixed(2)}%.`;
+			}
+
+	//LA ALTURA Y NOTA DEL NB MAS JOVEN
+	if(sexoAlumno== "nb"){
+		if(edadAlumno<edadMinimaNb || nobBandera == false){
+			edadMinimaNb=edadAlumno;
+			notaMinimaNb = notaAlumno;
+			alturaMinimaNb = alturaAlumno;
+			nobBandera=true;
+			}
+	}
+					   
+	promedioMujeres = acumuladorMujeres / contadorMujeres;
+	promedioHombres = acumuladorHombres / contadorHombres;
+	promedioNb = acumuladorNb / contadorNb;
+
+	if(temperaturaAlumno > 37){
+		contadorFiebre++;
+	}
+	//ENCONTRAR EL ALUMNO CON MAYOR TEMPERATURA
+	if (temperaturaAlumno > mayorTemperatura || temperaturaBandera ==false) {
+		mayorTemperatura= temperaturaAlumno;
+		alumnoMayorTemp= nombreAlumno;
+		edadMayorTemp= edadAlumno;
+		temperaturaBandera=true;
+		mensaje+= `El alumno con mayor temperatura (${mayorTemperatura}ºC) es ${alumnoMayorTemp} de ${edadMayorTemp} años de edad.`;
+	}
+
+	//ENCONTRAR LA ALUMNA MUJER MÁS ALTA
+	if(sexoAlumno=="f"){
+		if (notaAlumno > mayorNotaMujer || notaMujerBandera ==false) {
+			mayorNotaMujer= notaAlumno;
+			alturaMujer= alturaAlumno;
+			nombreAlturaMujer = nombreAlumno;
+			notaMujerBandera=true;
+		}
+	}
+	//el nombre del primer hombre, que mide menos de 160 cm y  está  desaprobado.
+	if(sexoAlumno == "m") {
+		if (alturaAlumno<160){
+			if (notaAlumno<4 && primerDesaprobado == false){
+				nombrePrimerDesaprobado = nombreAlumno;
+				primerDesaprobado=true;
+			}
+		}
+	}
+
+	respuesta = confirm("Desea ingresar otro alumno?");
+
+	}
+
+	//PRIMER PUNTO: VALIDANDO QUE LAS VARIABLES A MOSTRAR NO ESTÉN VACIAS 
+	if(contadorMujeres >0 ){
+		mensaje += ("La cantidad de mujeres es " + contadorMujeres  + `. \nEl promedio de edad entre las alumnas mujeres es ${promedioMujeres}.`);
+		mensaje+= `La alumna ${nombreAlturaMujer} es la más alta (${alturaMujer/100}mts) y tiene  ${nombreAlturaMujer} de nota.`;
+
+	} else {
+		mensaje+= "No hay alumnas mujeres. \n"
+	}
+
+	if(contadorHombres >0 ){
+		mensaje += ("\nEl promedio de edad entre los alumnos hombres es: " + promedioHombres + "años.");
+	} 
+
+	if(primerDesaprobado==true){
+		mensaje += `El primer alumno hombre desaprobado que mide menos de 1.60mts es: ${nombrePrimerDesaprobado}.`;
+
+	}
+
+	if(contadorNb >0 ){
+		mensaje += (`\nEl promedio de edad entre les alumnes nb es: ${promedioNb} años.`);
+		mensaje+= `\nEl alumne NB más joven tiene${notaMinimaNb} de nota y ${alturaAlumno/100} mts de altura.`;
+
+	}
+
+	if(contadorFiebre >0) {
+		mensaje += `\nLa cantidad de alumnos con fiebre es: ${contadorFiebre}.`;
+	}else {
+		mensaje += "No hay alumnos con fiebre.";
+	}
+
+	alert(mensaje);
+
+}
