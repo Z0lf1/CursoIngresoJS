@@ -166,6 +166,7 @@ function mostrar()
   var porcentajeVariable;
   var porcenAFI;
   var valorFInal;
+  var mensaje;
 
   var primeraMuestra;
   var costoPrimero; 
@@ -215,7 +216,7 @@ function mostrar()
     }
 
     acumuladorCosto+=costo;  
-    contadorIngresos++;
+    
     switch(contadorIngresos)
       {
        case 1:
@@ -236,21 +237,26 @@ function mostrar()
       masCaroMuestraTipo=muestraTipo;
       banderaCosto=false;
     }
+    contadorIngresos++;
     respuesta = confirm("Desea ingresar más?");
   }
-  promedio=acumuladorCosto/contadorIngresos;
-  if(acumuladorCosto>500000)
+ 
+  if(acumuladorCosto>500000 && acumuladorCosto<750000)
   {
-    porcenAFI=25;
-    if(acumuladorCosto>750000)
-    {
-      porcenAFI=40;
-    }
+    porcentajeVariable = acumuladorCosto * 25/100;
+    document.write(`habiendo superado los 500000 recaudados, AFIP vino a jugar, usted paga un valor de $ ${porcentajeVariable} a razon del 25% por ingresos brutos`);
   }
-    porcentajeVariable = acumuladorCosto * porcenAFI/100);
-    valorFInal =acumuladorCosto + porcentajeVariable;
+    else
+        { 
+          if(acumuladorCosto>750000)
+          {
+            porcentajeVariable = acumuladorCosto * 40/100;
+            document.write(`habiendo superado los 750000 recaudados, AFIP vino a jugar, usted paga un valor de $ ${porcentajeVariable} a razon del 40% por ingresos brutos`);
+          }
+        }  
+    
 
-    if(contadorIngresos>0)
+  if(contadorIngresos>0)
     {
       document.write("Del primer ingreso el tipo de muestra fue: "+primeraMuestra+", su precio fue de: "+costoPrimero+" y su procedencia es: "+origenPrimero+ "br");
       if( contadorIngresos>4)
@@ -258,11 +264,7 @@ function mostrar()
         document.write("Del quinto ingreso el el precio fue: "+costoQuinto+" y su cantidad de tubos es de: "+cantidadTubosQuinto+ "br");
       }
     }
+   document.write("El promedio de dinero ganado es de: "+promedio+"br"); 
+   document.write("Del mayor precio  de prestacion la cantidad de tubos consumidos fue: "+masCaroTubos+" siendo su procedencia: "+masCaroOrigen+" siendo el tipo de muestras "+tipoConMasCantidad+ "br");
 }
 
-1) Del primer ingreso: tipo de muestra, precio y su procedencia
-2) Del quinto ingreso de muestra (si existe) solo el precio y la cantidad de tubos
-3) El promedio de dinero ganado en total
-4) Del mayor precio de prestación: la cantidad de tubos, su procedencia y el tipo de muestras
-5) Si el total de dinero recaudado supera los 500.000 pesos AFIP hace de las suyas y toca pagar
- ingresos brutos del 25% y si supera los 750.000 es 40%
