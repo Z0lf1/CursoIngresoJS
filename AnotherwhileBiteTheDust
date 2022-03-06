@@ -211,3 +211,40 @@ function mostrar()
 	alert(mensaje);
 
 }
+
+Enunciados
+Mariano Fernandez
+•
+19:26 (Última modificación: 20:27)
+1.UTN airlines nos pide desarrollar una app para registrar el ingreso de pasajeros a distintos vuelos, se le pide a los pasajeros: nombre, edad (validar 13-85), cantidad de asientos que desea reservar (validar minimo 1 maximo 5 asientos), cantidad de kilómetros del viaje (validar 3000 kilómetros el mínimo - 18000 kilómetros máximo), el precio por asiento es 1500 pesos, informar:
+A. La recaudación total del vuelo.
+B. La cantidad total de asientos ocupados.
+C. La edad promedio por pasajero.
+D. La cantidad de pasajeros que tienen entre 18 y 45 años, que realizarán un viaje a un destino cuya distancia es 5000 km ó 13000 km
+
+
+2. Un jugador de League of Legends tiene un fin de semana libre y va a jugar 15
+partidas.
+Para mejorar su jugabilidad, por cada partida jugada va a registrar:
+- Modo de juego ("Normal", "Clasificatoria", "ARAM")
+- Nombre del personaje que usó (“Vayne”,”Annie”,”Renata”)
+- La cantidad de asesinatos. (No puede ser negativo)
+- La cantidad de muertes. (No puede ser negativo)
+- La cantidad de asistencias. (No puede ser negativo)
+De lo registrado, al jugador le interesa lo siguiente:
+a) El modo de juego más jugado.
+b) De las partidas ARAM, el personaje con menos asistencias.
+c) El promedio de muertes.
+d) El porcentaje sobre los modos de juego. (ejemplo: 20% normal, 50% clasificatoria y
+30 % ARAM.)
+
+3.Se debe llevar a cabo el registro de los ingresos a la guardia, los mismos se dividen en tres grupos: clínica,  pediátrica y traumatológica . Se pide el ingreso del nombre del paciente, la edad y el tipo de atención (anteriormente mencionado). Al momento de la recepción se solicita el tipo de prestación (prepaga - obra social - sin prestación). El valor de la consulta es de $2500, en caso de contar con prepaga la cobertura es del 100%, para obra social es del 50%.
+
+se precisa saber:
+
+A.Ingresos por obra social y sin prestación.
+B.Nombre y tipo de prestación del paciente de más edad en traumatología.
+C.Qué tipo de prestación es la más utilizada.
+D.Cuántos pacientes menores de edad solicitaron atención traumatológica.
+E.El total en pesos de todas las prestaciones.
+F.El reintegro que deberán hacer las prepagas.
