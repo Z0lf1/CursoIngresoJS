@@ -1,0 +1,152 @@
+	var 
+	var 
+	var 
+
+	respuesta=true;
+
+	contador=0;
+
+	while()
+	{
+		=prompt("Ingrese");
+		while()
+		{
+			=prompt("ERROR. Ingrese");
+		}
+
+		=prompt("Ingrese");		
+		=parseInt();
+		while(isNaN()||)
+		{
+			=prompt("ERROR. Ingrese");
+			=parseInt();		
+		}
+
+		=prompt("Ingrese");
+		while(!="")
+		{
+			=prompt("ERROR. Ingrese");
+		}
+
+
+	contador++;
+	respuesta=confirm("Desea hacer otro ingreso?");
+	}
+
+	if (acumuladorUno > acumuladorDos && acumuladorUno > acumuladorTres) 
+	{
+		mayor = "Uno";
+	} 
+	else 
+		{
+			if (acumuladorDos > acumuladorUno && acumuladorDos > acumuladorTres) 
+			{
+				mayor= "Dos";
+			} 
+			else 
+			{
+				mayor = "Tres";
+
+			}
+		}
+
+
+
+//PEDIDA Y VALIDACION DE TEXTO
+VARIABLE = prompt("Ingrese la VARIABLE (A, B O C");
+while(VARIABLE != "A" && VARIABLE != "B" && VARIABLE != "C")
+{
+	VARIABLE = prompt("La VARIABLE no es valida, ingresela nuevamente (A, B O C");
+}
+
+// PEDIDA Y VALIDACION DE NUMERO
+VARIABLE = prompt("Ingrese la edad del estudiante");
+VARIABLE = parseInt(VARIABLE);
+while(isNaN(VARIABLE) || VARIABLE < 0 || VARIABLE > 0)
+{
+	VARIABLE = prompt("VARIABLE no valida, ingrese la VARIABLE nuevamente");
+	VARIABLE = parseInt(VARIABLE);
+}
+
+//DEFINIR MAXIMO
+if(NUMERO > MAXIMO || banderaMaxima == false)
+{
+	MAXIMO = NUMERO;
+	banderaMaxima = true;
+}
+
+//DEFINIR MINIMO
+if(NUMERO < MINIMO || banderaMinima == false)
+{
+	MINIMO = NUMERO;
+	banderaMinima = true;
+}
+
+//PRIMERA VEZ
+if(AAAAAAAAAAA < > 0 && banderaPRIMERAVEZ == false)
+{
+	VARIABLE = NUMERO;
+	banderaPRIMERAVEZ == true;
+}
+
+//VALIDAR PROMEDIO
+promedio = "No hay para realizar el promedio de edad"
+if(contador != 0)
+{
+	AAAAAAAAA = acumulador / contador;
+	AAAAAAAAA = "El promedio es: " + AAAAAAAAA;
+}
+
+//EVALUAR CUAL ES EL MAYOR O MENOR
+if(AAAAAAAAAA > BBBBBBBBBBBB && AAAAAAAAAA > CCCCCCCCCCCCCCCC)
+{
+	MENSAJE = "EL QUE MAS ES AAAAAAAAAAAAAAA ";
+}
+else
+{
+	if(BBBBBBBBBBBB > CCCCCCCCCCCCCCCC)
+	{
+	    MENSAJE = "EL QUE MAS ES BBBBBBBBBBBB";
+	}
+	else
+	{
+		MENSAJE = "EL QUE MAS ES CCCCCCCCCCCCC";
+  	}
+}
+
+//PARES
+par = AAAAAAAAAA % 2;
+if (par == 0) 
+{
+	contadorPares ++;
+}
+
+//un switchsito
+switch(VARIABLE)
+{
+	case "":
+		aaaaaaaaaaaaa;
+		break;
+	case "":
+		bbbbbbbbbbbb;
+		break;
+	default:
+		cccccccccccccccccc;
+}
+
+//descuento
+descuento = "tanto";
+if(VARIABLE < > 0)
+{
+	descuento = "tanto";
+}
+
+paisDeOrigen = prompt("Ingrese el pais de origen del producto").toLowerCase();
+
+//WRITE
+document.write(" " +  + " " +  + "<br>");
+document.write(" " +  + " " +  + "<br>");
+document.write(" " +  + " " +  + "<br>");
+document.write(" " +  + " " +  + "<br>");
+alert("");
++"\n"

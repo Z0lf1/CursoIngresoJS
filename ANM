@@ -39,9 +39,10 @@ O
 //calculo Area romboide: 
 	arearomboide = (ladosMayores*ladosMenores)/2;
 
-//PORCENTAJE:
+//APLICAR PORCENTAJE:
 	porcentajeAplicado = (variable*porcentaje)/100 ;
-
+// CALCULAR PORCENTAJE:
+	porcentajeAAVERIGUAR= contadorAEVALUAR* 100/TOTALVARIABLE;
 //Concatenacion de mensajes largos:
 	mensaje = "Para la cantidad de "+cantidad+" cometas, necesitará: ";
 	mensaje += consumoFinalVarillas.toFixed(2)+" mt de varillas y ";
@@ -179,3 +180,5 @@ while(respuesta==true)
 				banderaDelPrimero=true;
 			}
 			respuesta = confirm("desea continuar?");
+			= asigna
+			== compara
